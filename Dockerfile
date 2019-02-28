@@ -22,9 +22,9 @@ RUN \
   apt-get install -y python3-pip
 
 ENV JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
-#RUN curl -s "https://archive.apache.org/dist/hadoop/core/hadoop-2.9.0/hadoop-2.9.0.tar.gz" | tar -xz -C /usr/local/
+RUN curl -s "https://archive.apache.org/dist/hadoop/core/hadoop-2.9.0/hadoop-2.9.0.tar.gz" | tar -xz -C /usr/local/
 # try a mirror site 
-RUN curl -s "https://mirrors.ocf.berkeley.edu/apache/hadoop/core/hadoop-2.9.0/hadoop-2.9.0.tar.gz" | tar -xz -C /usr/local/
+#RUN curl -s "https://mirrors.ocf.berkeley.edu/apache/hadoop/core/hadoop-2.9.0/hadoop-2.9.0.tar.gz" | tar -xz -C /usr/local/
 
 RUN cd /usr/local && ln -s ./hadoop-2.9.0 hadoop
 
